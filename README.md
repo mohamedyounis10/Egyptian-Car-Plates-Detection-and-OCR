@@ -1,7 +1,4 @@
 <div align="center">
-  <!-- 🖼️ PLACEHOLDER: Insert your project header image here -->
-  <!-- <img src="URL_TO_YOUR_HEADER_IMAGE" alt="Project Banner" width="100%"> -->
-  
   <h1>Egyptian Car Plates Detection & OCR 🚗🇪🇬📸</h1>
   <p>End-to-end computer vision pipeline for detecting and reading Egyptian car license plates using YOLO, Custom CNNs, and an interactive Streamlit dashboard.</p>
 
@@ -22,6 +19,8 @@
     <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-Web_App-FF4B4B" />
   </p>
 </div>
+
+<img width="1920" height="1080" alt="License Egypt Presentation" src="https://github.com/user-attachments/assets/ba07a6a2-7e94-4716-847c-e0a1be21b744" />
 
 ---
 
@@ -65,9 +64,6 @@ This project was developed as part of an academic curriculum focusing on applied
 - [`Car images/`](#) — Sample datasets and testing images
 - [`Custom_CNN/`](#) — Custom Convolutional Neural Network notebooks and models
 - [`YOLO_Models/`](#) — YOLO-based detection and OCR models, plus the web application
-  - `Detection Model/`
-  - `OCR Model/`
-  - `Streamlit_app.py`
 - [`Radar_Detections/`](#) — Logs and outputs from the detection pipeline
 - `license Egypt Presentation.pdf` — Technical presentation slides
 
@@ -77,6 +73,9 @@ Tree 🌳:
 Project/
 ├─ Car images/
 ├─ Custom_CNN/
+│  ├─ Detection Model/
+│  ├─ OCR Model/
+│  └─ Streamlit_app.py
 ├─ Radar_Detections/
 ├─ YOLO_Models/
 │  ├─ Detection Model/
@@ -100,11 +99,8 @@ The first approach is a highly specialized **Custom Convolutional Neural Network
 - **Advanced Data Augmentation**: Extensive, aggressive augmentation techniques were applied to ensure the model remains resilient against harsh lighting conditions, varied camera angles, and partial occlusions common in Egyptian streets.
 
 #### Custom CNN Streamlit Preview 🖼️
-<!-- 🖼️ PLACEHOLDER 1: Insert your Custom CNN Streamlit app screenshot here -->
-<div align="center">
-  <p><i>Replace this text with the screenshot of your Custom CNN Streamlit application</i></p>
-  <!-- <img alt="Custom CNN Streamlit App Screenshot" src="URL_TO_YOUR_CNN_STREAMLIT_IMAGE" width="100%" /> -->
-</div>
+
+<img width="1919" height="765" alt="image" src="https://github.com/user-attachments/assets/61d598ca-4d98-44b9-8ecd-0e8f8eccd543" />
 
 ---
 
@@ -115,19 +111,8 @@ The second approach focuses on speed and production-readiness by utilizing the *
 - **Radar Logic Integration**: This approach goes beyond just detection; it hooks the YOLO outputs into a simulated "radar" system that logs the detected plate characters, calculates speed data, and records timestamps for actionable insights.
 
 #### YOLO Streamlit Preview 🖼️
-<!-- 🖼️ PLACEHOLDER 2: Insert your YOLO Streamlit app screenshot here -->
-<div align="center">
-  <p><i>Replace this text with the screenshot of your YOLO Streamlit application (e.g., Radar Logs)</i></p>
-  <!-- <img alt="YOLO Streamlit App Screenshot" src="URL_TO_YOUR_YOLO_STREAMLIT_IMAGE" width="100%" /> -->
-</div>
 
-To run the Streamlit apps locally:
-
-```bash
-# For YOLO model (example)
-cd YOLO_Models
-streamlit run Streamlit_app.py
-```
+<img width="1902" height="885" alt="Screenshot 2026-05-16 222047" src="https://github.com/user-attachments/assets/eb02744b-edae-4452-9f89-f7af0ef0ce17" />
 
 ---
 
@@ -147,13 +132,23 @@ python -m venv .venv
 pip install streamlit opencv-python ultralytics torch torchvision pandas numpy
 ```
 
-### 3) Launch the App 🚀
+### 3) Launch the Applications 🚀
+
+Since this project features two distinct approaches, there are two separate Streamlit interfaces you can explore:
+
+**A. Run the Custom CNN Application:**
+```bash
+cd Custom_CNN
+streamlit run Streamlit_app.py
+```
+
+**B. Run the YOLO & Radar Application:**
 ```bash
 cd YOLO_Models
 streamlit run Streamlit_app.py
 ```
 
-Upload a car image through the web interface to see the detection and OCR results in real-time!
+Upload a car image through either web interface to see the detection and OCR results in real-time!
 
 ---
 
@@ -161,4 +156,3 @@ Upload a car image through the web interface to see the detection and OCR result
 ## Author ✍️
 
 - **Name**: Mohamed Younis
-- **Program**: MSC KFS - Data Science Phase 2 💙
