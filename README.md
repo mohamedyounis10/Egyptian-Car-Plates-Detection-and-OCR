@@ -51,11 +51,17 @@ This repository focuses on **Egyptian License Plate Detection and Character Reco
 <a id="academic-context"></a>
 ## Academic Context 🎓
 
-This project was developed as part of an academic curriculum focusing on applied Computer Vision and Deep Learning. It demonstrates the ability to:
-- Integrate state-of-the-art models (YOLO) with custom-built neural networks (CNNs).
-- Handle real-world, noisy data (varying angles, lighting, and occlusions).
-- Deploy machine learning pipelines into user-friendly, interactive web applications.
-- Document and present technical architectures clearly.
+This project was developed as part of an academic curriculum focusing on applied Computer Vision and Deep Learning. It explores **two distinct technical approaches** for Egyptian license plate detection and OCR:
+
+* **Custom CNN-based Pipeline 🧠**: A fully customized deep learning architecture designed specifically for Egyptian plate localization and character recognition.
+* **YOLO-based Real-Time Pipeline 🚀**: A high-speed detection framework integrated with OCR for scalable, production-ready deployment.
+
+Through these approaches, the project demonstrates the ability to:
+
+* Integrate state-of-the-art models (YOLO) with custom-built neural networks (CNNs).
+* Compare specialized architectures versus real-time deployment solutions.
+* Handle real-world, noisy data (varying angles, lighting, and occlusions).
+* Deploy machine learning pipelines into user-friendly, interactive web applications.
 
 ---
 
