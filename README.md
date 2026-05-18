@@ -30,8 +30,7 @@
 - [Overview 🧾](#overview)
 - [Academic Context 🎓](#academic-context)
 - [Project Structure 🗂️](#project-structure)
-- [Pipeline & Models ⚙️](#pipeline)
-- [Streamlit Preview 🖼️](#streamlit-preview)
+- [Approaches & Models ⚙️](#pipeline)
 - [How to Run ▶️](#how-to-run)
 - [Author ✍️](#author)
 
@@ -90,44 +89,42 @@ Project/
 ---
 
 <a id="pipeline"></a>
-## Pipeline & Models ⚙️
+## Approaches & Models ⚙️
 
-The system's development evolved through two main phases, starting with a foundational deep learning approach and culminating in a state-of-the-art deployment model.
+This project explores two distinct, powerful approaches to solve the Egyptian license plate detection and OCR problem, each with its own strengths and implementations.
 
-### Phase 1: Custom CNN Architecture 🧠
-In the beginning, a highly specialized **Custom Convolutional Neural Network (CNN)** was designed and trained from scratch. 
-- **Uniqueness & Power**: This architecture was specifically tailored to handle the unique aspect ratios, fonts, and structures of Egyptian license plates. 
-- **Custom Loss Function**: It utilizes a robust custom loss function to effectively penalize background noise and focus purely on the plate features.
-- **Data Augmentation**: Extensive augmentation techniques were applied to make the model resilient against various lighting conditions, angles, and occlusions common in Egyptian streets.
+### 1. Custom CNN Architecture 🧠
+The first approach is a highly specialized **Custom Convolutional Neural Network (CNN)** built entirely from scratch. 
+- **Uniqueness & Power**: This model is structurally tailored to exclusively handle the unique aspect ratios, distinctive fonts, and specific layouts of Egyptian license plates. It does not rely on pre-trained generic weights, making its learned features highly domain-specific.
+- **Custom Loss Function**: It introduces a robust, custom-designed loss function to severely penalize background noise (e.g., bumpers, text on cars) and force the network to focus purely on the plate's characters.
+- **Advanced Data Augmentation**: Extensive, aggressive augmentation techniques were applied to ensure the model remains resilient against harsh lighting conditions, varied camera angles, and partial occlusions common in Egyptian streets.
 
-### Phase 2: YOLO Integration for Real-Time Detection 🚀
-To elevate the project to a production-ready, real-time tracking system, the pipeline utilizes the **YOLO (You Only Look Once)** framework.
-- **Fast Detection**: YOLO rapidly and accurately localizes bounding boxes around vehicles and their plates in a fraction of a second.
-- **OCR Integration**: The detected plate regions are cropped and passed to an OCR model to extract the specific Arabic letters and numbers.
-- **Radar Logic Integration**: The YOLO outputs are hooked into a simulated "radar" system that logs the detected plate characters, speed data, and timestamps.
+#### Custom CNN Streamlit Preview 🖼️
+<!-- 🖼️ PLACEHOLDER 1: Insert your Custom CNN Streamlit app screenshot here -->
+<div align="center">
+  <p><i>Replace this text with the screenshot of your Custom CNN Streamlit application</i></p>
+  <!-- <img alt="Custom CNN Streamlit App Screenshot" src="URL_TO_YOUR_CNN_STREAMLIT_IMAGE" width="100%" /> -->
+</div>
 
 ---
 
-<a id="streamlit-preview"></a>
-## Streamlit Preview 🖼️
+### 2. YOLO-Based Real-Time Pipeline 🚀
+The second approach focuses on speed and production-readiness by utilizing the **YOLO (You Only Look Once)** framework, designed for real-time tracking and logging.
+- **Lightning-Fast Detection**: YOLO rapidly and accurately localizes bounding boxes around vehicles and their plates in a fraction of a second, making it ideal for video streams or live cameras.
+- **OCR Integration**: The detected plate regions are cropped and passed to an integrated OCR module to cleanly extract the specific Arabic letters and numbers.
+- **Radar Logic Integration**: This approach goes beyond just detection; it hooks the YOLO outputs into a simulated "radar" system that logs the detected plate characters, calculates speed data, and records timestamps for actionable insights.
 
-<!-- 🖼️ PLACEHOLDER 1: Insert your first Streamlit app screenshot here (e.g. Upload Image / Detection) -->
+#### YOLO Streamlit Preview 🖼️
+<!-- 🖼️ PLACEHOLDER 2: Insert your YOLO Streamlit app screenshot here -->
 <div align="center">
-  <p><i>Replace this text with the first screenshot of your Streamlit application</i></p>
-  <!-- <img alt="Streamlit App Screenshot 1" src="URL_TO_YOUR_STREAMLIT_IMAGE_1" width="100%" /> -->
+  <p><i>Replace this text with the screenshot of your YOLO Streamlit application (e.g., Radar Logs)</i></p>
+  <!-- <img alt="YOLO Streamlit App Screenshot" src="URL_TO_YOUR_YOLO_STREAMLIT_IMAGE" width="100%" /> -->
 </div>
 
-<br>
-
-<!-- 🖼️ PLACEHOLDER 2: Insert your second Streamlit app screenshot here (e.g. Radar Logs / OCR Output) -->
-<div align="center">
-  <p><i>Replace this text with the second screenshot of your Streamlit application (e.g., Radar Logs)</i></p>
-  <!-- <img alt="Streamlit App Screenshot 2" src="URL_TO_YOUR_STREAMLIT_IMAGE_2" width="100%" /> -->
-</div>
-
-To run the Streamlit app locally:
+To run the Streamlit apps locally:
 
 ```bash
+# For YOLO model (example)
 cd YOLO_Models
 streamlit run Streamlit_app.py
 ```
