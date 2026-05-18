@@ -5,9 +5,9 @@
   <p>
     <a href="#overview">Overview 🧾</a> •
     <a href="#academic-context">Academic Context 🎓</a> •
+    <a href="#academic-context">Academic Context 🎓</a> •
     <a href="#project-structure">Project Structure 🗂️</a> •
     <a href="#pipeline">Pipeline & Models ⚙️</a> •
-    <a href="#streamlit-preview">Streamlit Preview 🖼️</a> •
     <a href="#how-to-run">How to Run ▶️</a>
   </p>
 
@@ -28,6 +28,7 @@
 
 - [Overview 🧾](#overview)
 - [Academic Context 🎓](#academic-context)
+- [Dataset 📂](#dataset)
 - [Project Structure 🗂️](#project-structure)
 - [Approaches & Models ⚙️](#pipeline)
 - [How to Run ▶️](#how-to-run)
@@ -55,6 +56,23 @@ This project was developed as part of an academic curriculum focusing on applied
 - Handle real-world, noisy data (varying angles, lighting, and occlusions).
 - Deploy machine learning pipelines into user-friendly, interactive web applications.
 - Document and present technical architectures clearly.
+
+---
+
+<a id="dataset"></a>
+## Dataset Links 📂
+
+The datasets used in this project were sourced from Kaggle and served as the foundation for both detection and OCR model development:
+
+- **Egyptian License Plate Dataset:** https://www.kaggle.com/datasets/mahmoudeldebase/egyptian-cars-plates
+- **OCR Character Dataset:** https://www.kaggle.com/datasets/alyalsayed/egyptian-car-plates
+
+### Kaggle Resources 🏆
+These datasets provided:
+- Vehicle and license plate images
+- Bounding box annotations
+- Character segmentation labels
+- OCR-ready Arabic letters and numbers
 
 ---
 
