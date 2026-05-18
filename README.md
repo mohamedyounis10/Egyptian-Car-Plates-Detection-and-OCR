@@ -92,23 +92,37 @@ Project/
 <a id="pipeline"></a>
 ## Pipeline & Models ⚙️
 
-The system utilizes a multi-stage approach for maximum accuracy:
+The system's development evolved through two main phases, starting with a foundational deep learning approach and culminating in a state-of-the-art deployment model.
 
-1. **Plate Detection**: Uses YOLO to quickly and accurately draw bounding boxes around license plates in an image.
-2. **Character Segmentation & OCR**: 
-   - Crops the detected plate.
-   - Passes the crop to a specialized OCR model (or Custom CNN) to read the specific Arabic characters and numbers.
-3. **Actionable Logging**: Integrates with simulated "radar" logic to record the detected plate string alongside timestamp and vehicle data into a localized log.
+### Phase 1: Custom CNN Architecture 🧠
+In the beginning, a highly specialized **Custom Convolutional Neural Network (CNN)** was designed and trained from scratch. 
+- **Uniqueness & Power**: This architecture was specifically tailored to handle the unique aspect ratios, fonts, and structures of Egyptian license plates. 
+- **Custom Loss Function**: It utilizes a robust custom loss function to effectively penalize background noise and focus purely on the plate features.
+- **Data Augmentation**: Extensive augmentation techniques were applied to make the model resilient against various lighting conditions, angles, and occlusions common in Egyptian streets.
+
+### Phase 2: YOLO Integration for Real-Time Detection 🚀
+To elevate the project to a production-ready, real-time tracking system, the pipeline utilizes the **YOLO (You Only Look Once)** framework.
+- **Fast Detection**: YOLO rapidly and accurately localizes bounding boxes around vehicles and their plates in a fraction of a second.
+- **OCR Integration**: The detected plate regions are cropped and passed to an OCR model to extract the specific Arabic letters and numbers.
+- **Radar Logic Integration**: The YOLO outputs are hooked into a simulated "radar" system that logs the detected plate characters, speed data, and timestamps.
 
 ---
 
 <a id="streamlit-preview"></a>
 ## Streamlit Preview 🖼️
 
-<!-- 🖼️ PLACEHOLDER: Insert your Streamlit app screenshots here -->
+<!-- 🖼️ PLACEHOLDER 1: Insert your first Streamlit app screenshot here (e.g. Upload Image / Detection) -->
 <div align="center">
-  <p><i>Replace this text with a screenshot of your Streamlit application</i></p>
-  <!-- <img alt="Streamlit App Screenshot" src="URL_TO_YOUR_STREAMLIT_IMAGE" width="100%" /> -->
+  <p><i>Replace this text with the first screenshot of your Streamlit application</i></p>
+  <!-- <img alt="Streamlit App Screenshot 1" src="URL_TO_YOUR_STREAMLIT_IMAGE_1" width="100%" /> -->
+</div>
+
+<br>
+
+<!-- 🖼️ PLACEHOLDER 2: Insert your second Streamlit app screenshot here (e.g. Radar Logs / OCR Output) -->
+<div align="center">
+  <p><i>Replace this text with the second screenshot of your Streamlit application (e.g., Radar Logs)</i></p>
+  <!-- <img alt="Streamlit App Screenshot 2" src="URL_TO_YOUR_STREAMLIT_IMAGE_2" width="100%" /> -->
 </div>
 
 To run the Streamlit app locally:
